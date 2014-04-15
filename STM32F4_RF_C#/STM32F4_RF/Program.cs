@@ -59,7 +59,7 @@ namespace STM32F4_RF
 
         static void Main(string[] args)
         {
-            SerialPort port = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+            SerialPort port = new SerialPort("COM6", 9600, Parity.None, 8, StopBits.One);
             port.Open();
             Listen LISTEN = new Listen(port);
 
