@@ -31,22 +31,5 @@ Do1: 90-100cm, Do2: 90-100cm
 h)moc1:7, moc2:6 czułość1: 3, czułość2: 0
 Do1: 90-100cm, Do2: 110-130cm 
 
-2.Z małą przeszkodą, oba nadajniki
-a)moc:7, czułość:3 (najmniejsza czułość i moc)
-b)moc:7, czułość:2
-c)moc:7, czułość:1
-d)moc:7, czułość:0
-e)moc:6, czułość:3
-f)moc:6, czułość:2
-g)moc:6, czułość:1
-h)moc:6, czułość:0
-
-2.1 Z małą przeszkodą, różna czułość i moc nadajników
-a)moc1:7, moc2:6 czułość: 3 (najmniejsza czułość i moc)
-b)moc1:7, moc2:5 czułość: 3
-c)moc1:7, moc2:7 czułość1: 3, czułość2: 2
-d)moc1:7, moc2:7 czułość1: 3, czułość2: 1
-e)moc1:7, moc2:7 czułość1: 3, czułość2: 0
-f)moc1:7, moc2:6 czułość1: 3, czułość2: 2
-g)moc1:7, moc2:6 czułość1: 3, czułość2: 1
-h)moc1:7, moc2:6 czułość1: 3, czułość2: 0
+Niwelację wpływu na transmisję niewielkiej przeszkody 
+można osiągnąć poprzez zwiększenie mocy nadajnika.
