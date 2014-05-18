@@ -53,7 +53,7 @@ namespace STM32F4_RF_PROG
             buffor += port.ReadExisting();
             TextBox.Invoke(new Action(delegate()
             {
-                TextBox.AppendText("\n" + buffor);
+                TextBox.AppendText(buffor);
                 buffor = "";
             }));
 
