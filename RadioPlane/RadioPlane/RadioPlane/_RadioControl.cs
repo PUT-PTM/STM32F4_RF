@@ -174,13 +174,13 @@ namespace RadioPlane
             this.PortDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x010, Convert.ToByte(3) }, 0, 5);
             this.PortDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x07, Convert.ToByte(0) }, 0, 5);
             this.PortDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x08, Convert.ToByte(50) }, 0, 5);
-            this.PortDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x11, Convert.ToByte(1) }, 0, 5);
+            this.PortDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x11, Convert.ToByte(8) }, 0, 5);
 
             this.Power = "7";
             this.Sensitiveness = "3";
             this.Channel = "0";
             this.Speed = "50";
-            this.LimitBuffor = "1";
+            this.LimitBuffor = "8";
         }
 
         public void SetMax()

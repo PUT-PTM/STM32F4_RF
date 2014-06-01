@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>d:\moje dokumenty\visual studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\plane.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\plane.xnb</Output>
       <Time>2014-05-13T23:48:16.4052032+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>d:\moje dokumenty\visual studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bg1.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bg1.xnb</Output>
       <Time>2014-05-14T00:13:31.4798605+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>d:\moje dokumenty\visual studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bg2.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bg2.xnb</Output>
       <Time>2014-05-14T00:13:46.4957193+02:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\f16.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\f16.xnb</Output>
       <Time>2014-05-15T18:09:41.6822395+02:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bigclouds1.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bigclouds1.xnb</Output>
       <Time>2014-05-17T14:15:09.6441909+02:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bigclouds2.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bigclouds2.xnb</Output>
       <Time>2014-05-17T14:15:48.1843953+02:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\miniclouds1.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\miniclouds1.xnb</Output>
       <Time>2014-05-17T14:06:00.260768+02:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\miniclouds2.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\miniclouds2.xnb</Output>
       <Time>2014-05-17T14:09:25.4915065+02:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\sky.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\sky.xnb</Output>
       <Time>2014-05-17T14:00:34.1001127+02:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bggrass.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\bggrass.xnb</Output>
       <Time>2014-05-17T15:43:01.9067471+02:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\explosion.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\explosion.xnb</Output>
       <Time>2013-06-20T01:54:47.1861739+02:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\tree.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\tree.xnb</Output>
       <Time>2014-05-18T13:32:03.8134297+02:00</Time>
     </Item>
     <Item>
@@ -115,17 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\tree2.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\tree2.xnb</Output>
       <Time>2014-05-18T13:32:26.0607021+02:00</Time>
-    </Item>
-    <Item>
-      <Source>gamefont.spritefont</Source>
-      <Name>gamefont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2014-05-31T21:34:49.9980825+02:00</Time>
     </Item>
     <Item>
       <Source>mainmenu.png</Source>
@@ -133,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\mainmenu.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\mainmenu.xnb</Output>
       <Time>2014-05-19T13:24:47.0993247+02:00</Time>
     </Item>
     <Item>
@@ -142,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnexit.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnexit.xnb</Output>
       <Time>2014-05-19T13:48:18.1440318+02:00</Time>
     </Item>
     <Item>
@@ -151,7 +142,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnplay.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnplay.xnb</Output>
       <Time>2014-05-19T13:47:53.4516195+02:00</Time>
     </Item>
     <Item>
@@ -160,7 +151,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnscore.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnscore.xnb</Output>
       <Time>2014-05-19T13:48:47.116689+02:00</Time>
     </Item>
     <Item>
@@ -169,7 +160,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnster.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\btnster.xnb</Output>
       <Time>2014-05-19T13:48:34.1259459+02:00</Time>
     </Item>
     <Item>
@@ -178,7 +169,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\controlerkey.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\controlerkey.xnb</Output>
       <Time>2014-05-19T14:34:59.8032776+02:00</Time>
     </Item>
     <Item>
@@ -187,8 +178,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\controlersignal.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\controlersignal.xnb</Output>
       <Time>2014-05-19T14:36:12.9174595+02:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\gamefont.xnb</Output>
+      <Time>2014-05-31T21:34:49.9980825+02:00</Time>
     </Item>
     <Item>
       <Source>lightgamefont.spritefont</Source>
@@ -196,7 +196,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\lightgamefont.xnb</Output>
+      <Output>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\lightgamefont.xnb</Output>
       <Time>2014-05-31T21:34:49.9400792+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -206,10 +206,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlaneContent\</RootDirectory>
-      <LoggerRootDirectory>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Moje Dokumenty\Visual Studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlaneContent\</RootDirectory>
+      <LoggerRootDirectory>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlane\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

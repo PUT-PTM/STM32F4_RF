@@ -1,1 +1,2 @@
 d:\moje dokumenty\visual studio 2012\Projects\PROJEKT_PTM\RadioPlane\RadioPlane\RadioPlaneContent\obj\x86\Debug\RadioPlaneContent.contentprojResolveAssemblyReference.cache
+D:\Moje Dokumenty\GitHub\STM32F4_RF\RadioPlane\RadioPlane\RadioPlaneContent\obj\x86\Debug\RadioPlaneContent.contentprojResolveAssemblyReference.cache
