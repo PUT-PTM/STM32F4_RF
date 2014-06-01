@@ -78,11 +78,13 @@ namespace STM32F4_RF_PROG
         {
             string com = this.AvailablePorts.SelectedItem.ToString();
 
-            this.portDevice = new SerialPort(com, 57600, Parity.None, 8, StopBits.One);
+            this.portDevice = new SerialPort(com, 56000, Parity.None, 8, StopBits.One);
+            
             this.portDevice.Open();
-
+            this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x010, Convert.ToByte(3) }, 0, 5);
+            this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x09, Convert.ToByte(7) }, 0, 5);
             Listen LISTEN = new Listen(this.portDevice, this.gettingText);
-
+            
             Thread oThread = new Thread(new ThreadStart(LISTEN.Listening));
             oThread.Start();
 
@@ -104,8 +106,8 @@ namespace STM32F4_RF_PROG
         {
             this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x09, Convert.ToByte(this.LabelPower.Text) }, 0, 5);
             this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x010, Convert.ToByte(this.LabelCzulosc.Text) }, 0, 5);
-            this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x07, Convert.ToByte(this.LabelKanal.Text) }, 0, 5);
-            this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x08, Convert.ToByte(this.LabelSpeed.Text) }, 0, 5);
+            //this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x07, Convert.ToByte(this.LabelKanal.Text) }, 0, 5);
+            //this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x08, Convert.ToByte(this.LabelSpeed.Text) }, 0, 5);
             this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x11, Convert.ToByte(this.LabelBuffor.Text) }, 0, 5);
 
             this.save.Visible = true;

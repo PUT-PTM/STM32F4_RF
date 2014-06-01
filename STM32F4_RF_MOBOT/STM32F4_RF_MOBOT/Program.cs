@@ -63,7 +63,7 @@ namespace STM32F4_RF_MOBOT
             Console.WriteLine("Numer portu: (COM3/4/...?)");
             string com = Console.ReadLine();
 
-            SerialPort port = new SerialPort(com, 57600, Parity.None, 8, StopBits.One);
+            SerialPort port = new SerialPort(com, 56000, Parity.None, 8, StopBits.One);
             port.Open();
 
             /*
