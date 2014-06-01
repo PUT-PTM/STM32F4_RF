@@ -71,97 +71,6 @@ void initButton() {
 }
 
 
-char red[] = "red-on";
-char green[] = "green-on";
-char blue[] = "blue-on";
-char yellow[] = "yellow-on";
-char red2[] = "red-off";
-char green2[] = "green-off";
-char blue2[] = "blue-off";
-char yellow2[] = "yellow-off";
-char alloff[] = "all-off";
-char allon[] = "all-on";
-
-int Interpreter(char *command){
-	if(strcmp(command, red) == 0) return 1;
-	else if(strcmp(command, green) == 0) return 2;
-	else if(strcmp(command, blue) == 0) return 3;
-	else if(strcmp(command, yellow) == 0) return 4;
-	else if(strcmp(command, red2) == 0) return 5;
-	else if(strcmp(command, green2) == 0) return 6;
-	else if(strcmp(command, blue2) == 0) return 7;
-	else if(strcmp(command, yellow2) == 0) return 8;
-	else if(strcmp(command, alloff) == 0) return 9;
-	else if(strcmp(command, allon) == 0) return 10;
-	else return 0;
-}
-
-void ControlComand(char* command){
-	switch(Interpreter(command)){
-	case 1: {
-			GPIO_SetBits(GPIOD, GPIO_Pin_14);
-			USART_puts(USART1, "Czerwona dioda zapalona!&");
-			break;
-		}
-	case 2: {
-				GPIO_SetBits(GPIOD, GPIO_Pin_12);
-				USART_puts(USART1, "Zielona dioda zapalona!&");
-				break;
-			}
-	case 3: {
-				GPIO_SetBits(GPIOD, GPIO_Pin_15);
-				USART_puts(USART1, "Niebieska dioda zapalona!&");
-				break;
-			}
-	case 4: {
-				GPIO_SetBits(GPIOD, GPIO_Pin_13);
-				USART_puts(USART1, "Zolta dioda zapalona!&");
-				break;
-			}
-	case 5: {
-				GPIO_ResetBits(GPIOD, GPIO_Pin_14);
-				USART_puts(USART1, "Czerwona dioda OFF!&");
-				break;
-			}
-	case 6: {
-				GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-				USART_puts(USART1, "Zielona dioda OFF!&");
-				break;
-			}
-	case 7: {
-				GPIO_ResetBits(GPIOD, GPIO_Pin_15);
-				USART_puts(USART1, "Niebieska dioda OFF!&");
-				break;
-			}
-	case 8: {
-				GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-				USART_puts(USART1, "Zolta dioda OFF!&");
-				break;
-			}
-	case 9: {
-				GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-				GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-				GPIO_ResetBits(GPIOD, GPIO_Pin_14);
-				GPIO_ResetBits(GPIOD, GPIO_Pin_15);
-				USART_puts(USART1, "Wszystkie diody OFF!&");
-				break;
-			}
-	case 10: {
-				GPIO_SetBits(GPIOD, GPIO_Pin_12);
-				GPIO_SetBits(GPIOD, GPIO_Pin_13);
-				GPIO_SetBits(GPIOD, GPIO_Pin_14);
-				GPIO_SetBits(GPIOD, GPIO_Pin_15);
-				USART_puts(USART1, "Wszystkie diody ON!&");
-				break;
-			}
-	default: {
-			USART_puts(USART1, "Error!&");
-			break;
-		}
-	}
-
-}
-
 void init_USART1(uint32_t baudrate){
 
 	/* This is a concept that has to do with the libraries provided by ST
@@ -278,29 +187,7 @@ int main(void) {
 	while (1){
 
 		char buff[4]="*&*";
-		/*if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)){
-			char buff[100] = "Stan diod:\n";
 
-			strcat(buff, "Zielona-");
-			if(GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_12)) strcat(buff, "ON\n");
-			else strcat(buff, "OFF\n");
-
-			strcat(buff, "Zolta-");
-			if(GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_13)) strcat(buff, "ON\n");
-			else strcat(buff, "OFF\n");
-
-			strcat(buff, "Czerwona-");
-			if(GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_14)) strcat(buff, "ON\n");
-			else strcat(buff, "OFF\n");
-
-			strcat(buff, "Niebieska-");
-			if(GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_15)) strcat(buff, "ON&");
-			else strcat(buff, "OFF&");
-
-			USART_puts(USART1, buff);
-
-			Delay(0x1FFFF3);
-		}*/
 	USART_puts(USART1, buff);
 	/*
 	 * You can do whatever you want in here
@@ -330,22 +217,12 @@ void USART1_IRQHandler(void){
 		}
 		else {
 			received_string[cnt] = '\0';
-			ControlComand(received_string);
 			received_string[cnt] = t;
 			cnt = 0;
 			//USART_puts(USART1, received_string);
 			ClearString();
 		}
 	}
-		/*
-		if( (t != 'n') && (cnt < 20) ){
-			received_string[cnt] = t;
-			cnt++;
-		}
-		else{ // otherwise reset the character counter and print the received string
-			cnt = 0;
-			USART_puts(USART1, received_string);
-		}
-		*/
+
 }
 

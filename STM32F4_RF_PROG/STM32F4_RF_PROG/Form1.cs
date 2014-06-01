@@ -83,6 +83,7 @@ namespace STM32F4_RF_PROG
             this.portDevice.Open();
             this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x010, Convert.ToByte(3) }, 0, 5);
             this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x09, Convert.ToByte(7) }, 0, 5);
+            this.portDevice.Write(new byte[] { 0x43, 0x78, 0x1E, 0x08, Convert.ToByte(50) }, 0, 5);
             Listen LISTEN = new Listen(this.portDevice, this.gettingText);
             
             Thread oThread = new Thread(new ThreadStart(LISTEN.Listening));

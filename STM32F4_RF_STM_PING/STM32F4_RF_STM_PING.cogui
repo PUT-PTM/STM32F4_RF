@@ -12,6 +12,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
@@ -20,24 +21,28 @@
 <input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">&#x0A;<org.coocox.welcome.ui.WelcomePage/>
 </input>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Shakecaine/Documents/GitHub/STM32F4_RF/STM32F4_RF_STM/main.c" title="main.c" tooltip="C:/Users/Shakecaine/Documents/GitHub/STM32F4_RF/STM32F4_RF_STM/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32F4_RF/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11611" selectionOffset="0" selectionTopPixel="3808"/>
+<editor id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" partName="Repository" title="Repository" tooltip="Repository" workbook="DefaultEditorWorkbook">
+<input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="526" subPageIndex="2" verticalPosition="360"/>
+</input>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/CooCox/CoIDE/workspace/STM32F4_RF_STM_PING/main.c" title="main.c" tooltip="C:/CooCox/CoIDE/workspace/STM32F4_RF_STM_PING/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32F4_RF_STM_PING/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8591" selectionTopPixel="3043"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="13">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
-<element path="/STM32F4_RF"/>
-<element path="/STM32F4_RF/cmsis"/>
-<element path="/STM32F4_RF/cmsis_boot"/>
-<element path="/STM32F4_RF/cmsis_boot/startup"/>
-<element path="/STM32F4_RF/cmsis_lib"/>
-<element path="/STM32F4_RF/cmsis_lib/include"/>
+<element path="/STM32F4_RF_STM_PING"/>
+<element path="/STM32F4_RF_STM_PING/cmsis"/>
+<element path="/STM32F4_RF_STM_PING/cmsis_boot"/>
+<element path="/STM32F4_RF_STM_PING/cmsis_boot/startup"/>
+<element path="/STM32F4_RF_STM_PING/cmsis_lib"/>
+<element path="/STM32F4_RF_STM_PING/cmsis_lib/include"/>
 </expanded>
 <selection>
-<element path="/STM32F4_RF/cmsis_lib/include/stm32f4xx_usart.h"/>
+<element path="/STM32F4_RF_STM_PING/main.c"/>
 </selection>
 </viewState>
 </view>
@@ -57,9 +62,6 @@
 <viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
 </view>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 <view id="org.coocox.component.ui.Help" partName="Help">
 <viewState/>
 </view>
@@ -97,12 +99,11 @@
 <view id="org.coocox.component.ui.ComponentView"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <view id="org.coocox.component.ui.Help"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@6e5b7e">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b631ee">
 <folder activePageID="org.coocox.component.ui.ComponentView" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.ComponentView" label="Components"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -110,13 +111,13 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6e5b7e">
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1b631ee">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1c3bb63" ratio="0.6987768" ratioLeft="457" ratioRight="197" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6e5b7e">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@e51dc9" ratio="0.7" ratioLeft="441" ratioRight="189" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1b631ee">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -124,22 +125,21 @@
 </presentation>
 </folder>
 </info>
-<info part="org.coocox.builder.ui.exampleView" ratio="0.29520294" ratioLeft="400" ratioRight="955" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6e5b7e"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1bd0bd4" ratio="0.7192308" ratioLeft="561" ratioRight="219" relationship="2" relative="org.coocox.builder.ui.exampleView">
+<info part="org.coocox.builder.ui.exampleView" ratio="0.24206643" ratioLeft="328" ratioRight="1027" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1b631ee"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@e6fc52" ratio="0.6784969" ratioLeft="325" ratioRight="154" relationship="2" relative="org.coocox.builder.ui.exampleView">
 <folder activePageID="org.coocox.component.ui.Help" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.Help" label="Help"/>
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView" label="LabelNotFound"/>
 <page content="org.coocox.builder.ui.MoreExampleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.44954127" ratioLeft="294" ratioRight="360" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@138d35f" ratio="0.6721311" ratioLeft="287" ratioRight="140" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6e5b7e">
+<info part="org.eclipse.ui.editorss" ratio="0.44920635" ratioLeft="283" ratioRight="347" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@881fe9" ratio="0.36984128" ratioLeft="233" ratioRight="397" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1b631ee">
 <folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -264,6 +264,13 @@
 <org.coocox.welcome.ui.WelcomePage/>
 </editor>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32F4_RF/main.c"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage">
+<org.coocox.welcome.ui.WelcomePage/>
+</editor>
+<editor factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser">
+<subPage horizontalPosition="0" selectedItemId="526" subPageIndex="2" verticalPosition="360"/>
+</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32F4_RF_STM_PING/main.c"/>
 </editors>
 <item historyLabel="welcome" index="0"/>
 <item historyLabel="Repository" index="1"/>
@@ -284,7 +291,7 @@
 <item historyLabel="welcome" index="6"/>
 <item historyLabel="welcome" index="7"/>
 <item historyLabel="main.c" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="6325" y="0"/>
 </item>
 <item historyLabel="main.c" index="8">
 <position info="not_deleted" x="9669" y="0"/>
@@ -304,8 +311,27 @@
 <item historyLabel="main.c" index="8">
 <position info="not_deleted" x="9593" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="8">
-<position info="not_deleted" x="9608" y="27"/>
+<item historyLabel="main.c" index="8">
+<position info="not_deleted" x="268" y="27"/>
+</item>
+<item historyLabel="welcome" index="9"/>
+<item historyLabel="Repository" index="10"/>
+<item historyLabel="main.c" index="11">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="Repository" index="10"/>
+<item historyLabel="main.c" index="11">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="Repository" index="10"/>
+<item historyLabel="main.c" index="11">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="main.c" index="11">
+<position info="not_deleted" x="5557" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="11">
+<position info="not_deleted" x="6114" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -356,8 +382,9 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="Lab6/cmsis_boot/startup/startup_stm32f4xx.c">
 <persistable path="/Lab6/cmsis_boot/startup/startup_stm32f4xx.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="Lab6/cmsis_boot/startup/startup_stm32f4xx.c">
-<persistable path="/Lab6/cmsis_boot/startup/startup_stm32f4xx.c"/>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>&#x0A;<subPage horizontalPosition="0" selectedItemId="0" subPageIndex="2" verticalPosition="0"/>
+</persistable>
 </file>
 </mruList>
 </workbench>
