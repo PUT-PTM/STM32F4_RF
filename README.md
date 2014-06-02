@@ -33,6 +33,16 @@ STM32F4_RF_PROG
 * Build/Debug: Load the project in Visual Studio 2012(or newest version), click Debug(or F5)
 * Test: Application allows you to test radio connection depending on parameters you choose. Automatically detects connected com devices. Tip: don't write your own text, when values from list are available.
 
+STM32F4_RF_STM
+* Build: Load the project in CooCox IDE. Click Build.
+* Program: Download program on STM device.
+* Test: Connect two radio adapters or COM device(connected to STM) that imitates connection. You need to Build/Debug STM32F4_RF_MOBOT and choose appropriate COM, after that you can write commands in console(specified in MOBOTmanual.txt). These programs require actual changes in code to work together, so basic knowledge of UART for STM and your radio adapter is required. Mostly recommended usage of MOBOT radio devices.
+
+STM32F4_RF_STM_PING
+* Build: Load the project in CooCox IDE. Click Build.
+* Program: Download program on STM device.
+* Test: Working together with Radio Plane. You can also check what data is sent with usage of STM32F4_RF_PROG(basic parameters: transfer speed 50000 bps, channel 0, 8bit).
+
 Debugging
 ---------
 CooCox is the in-circuit debugger via the ST-LINK works out of the box.  Click the little bug icon, wait a few seconds, and you've breakpoints in a live embedded device. 
