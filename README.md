@@ -57,5 +57,7 @@ Clear out all unused and not needed code. Add more comments to code, where expla
 Helpful sites
 -------------
 Example of USART usage: http://gpio.kaltpost.de/?page_id=167
+
 Example of code used to handle Radio Adapters in C#: https://www.dropbox.com/s/oepzl5f9h2x6kw3/Com%20Send.txt
+
 Example of code used to handle Radio Adapters in CooCox IDE: https://www.dropbox.com/s/vdr20sf5xpxkkpp/USART.txt
