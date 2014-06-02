@@ -172,23 +172,27 @@ int main(void) {
 
 	//USART_puts(USART1, "Init complete! Hello World!&"); // just send a message to indicate that it works
 	byte bull[5];
-						bull[0]=0x43;
-						bull[1]=0x78;
-						bull[2]=0x1E;
-						bull[3]=0x09;
-						bull[4]=7;
-				USART_puts(USART1, bull);
-				bull[0]=0x43;
-				bull[1]=0x78;
-				bull[2]=0x1E;
-				bull[3]=0x08;
-				bull[4]=50;
+
+	bull[0]=0x43;
+	bull[1]=0x78;
+	bull[2]=0x1E;
+	bull[3]=0x09;
+	bull[4]=7;
+
 	USART_puts(USART1, bull);
+
+	bull[0]=0x43;
+	bull[1]=0x78;
+	bull[2]=0x1E;
+	bull[3]=0x08;
+	bull[4]=50;
+	USART_puts(USART1, bull);
+
 	while (1){
 
 		char buff[4]="*&*";
 
-	USART_puts(USART1, buff);
+		USART_puts(USART1, buff);
 	/*
 	 * You can do whatever you want in here
 	 */
@@ -208,6 +212,8 @@ void USART1_IRQHandler(void){
 		/* check if the received character is not the LF character (used to determine end of string)
 		 * or the if the maximum string length has been been reached
 		 */
+
+		/*
 		if( (t != '&') && (t != '\n') ){
 			received_string[cnt] = t;
 			cnt++;
@@ -222,6 +228,7 @@ void USART1_IRQHandler(void){
 			//USART_puts(USART1, received_string);
 			ClearString();
 		}
+		*/
 	}
 
 }
