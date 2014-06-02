@@ -27,7 +27,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Moje Dokumenty/GitHub/STM32F4_RF/STM32F4_RF_STM_PING/main.c" title="main.c" tooltip="D:/Moje Dokumenty/GitHub/STM32F4_RF/STM32F4_RF_STM_PING/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32F4_RF_STM_PING/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8035" selectionTopPixel="3033"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7027" selectionTopPixel="2123"/>
 </editor>
 </editors>
 <views>
