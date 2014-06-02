@@ -96,7 +96,6 @@ namespace RadioPlane
         {
             file = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             wFile = new StreamWriter(file);
-            //wFile.BaseStream.Seek(0, SeekOrigin.End);
             for (int i = 0; i < Scoress.Count; i++)
             {
                 wFile.WriteLine(Scoress[i]);

@@ -16,18 +16,18 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.coocox.welcome.ui.WelcomePage" name="" partName="welcome" title="welcome" tooltip="" workbook="DefaultEditorWorkbook">
-<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">&#x0A;<org.coocox.welcome.ui.WelcomePage/>
-</input>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Moje Dokumenty/GitHub/STM32F4_RF/STM32F4_RF_STM/main.c" title="main.c" tooltip="D:/Moje Dokumenty/GitHub/STM32F4_RF/STM32F4_RF_STM/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/CooCox/CoIDE/workspace/PROJEKT_PTM/STM32F4_RF/main.c" title="main.c" tooltip="C:/CooCox/CoIDE/workspace/PROJEKT_PTM/STM32F4_RF/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32F4_RF/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10714" selectionTopPixel="3869"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5256" selectionTopPixel="2385"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_usart.h" partName="stm32f4xx_usart.h" path="C:/CooCox/CoIDE/workspace/PROJEKT_PTM/STM32F4_RF/cmsis_lib/include/stm32f4xx_usart.h" title="stm32f4xx_usart.h" tooltip="C:/CooCox/CoIDE/workspace/PROJEKT_PTM/STM32F4_RF/cmsis_lib/include/stm32f4xx_usart.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32F4_RF/cmsis_lib/include/stm32f4xx_usart.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5490" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="13">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/STM32F4_RF"/>
 <element path="/STM32F4_RF/cmsis"/>
@@ -37,7 +37,7 @@
 <element path="/STM32F4_RF/cmsis_lib/include"/>
 </expanded>
 <selection>
-<element path="/STM32F4_RF/cmsis_lib/include/stm32f4xx_usart.h"/>
+<element path="/STM32F4_RF/cmsis/core_cm4_simd.h"/>
 </selection>
 </viewState>
 </view>
@@ -124,7 +124,7 @@
 </presentation>
 </folder>
 </info>
-<info part="org.coocox.builder.ui.exampleView" ratio="0.29520294" ratioLeft="400" ratioRight="955" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6e5b7e"/>
+<info part="org.coocox.builder.ui.exampleView" ratio="0.22" ratioLeft="220" ratioRight="780" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6e5b7e"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1bd0bd4" ratio="0.7192308" ratioLeft="561" ratioRight="219" relationship="2" relative="org.coocox.builder.ui.exampleView">
 <folder activePageID="org.coocox.component.ui.Help" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.Help" label="Help"/>
@@ -139,7 +139,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44954127" ratioLeft="294" ratioRight="360" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@138d35f" ratio="0.6721311" ratioLeft="287" ratioRight="140" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6e5b7e">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@138d35f" ratio="0.3685015" ratioLeft="241" ratioRight="413" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6e5b7e">
 <folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -264,6 +264,8 @@
 <org.coocox.welcome.ui.WelcomePage/>
 </editor>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32F4_RF/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32F4_RF/cmsis_lib/include/stm32f4xx_usart.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32F4_RF/cmsis/core_cm4_simd.h"/>
 </editors>
 <item historyLabel="welcome" index="0"/>
 <item historyLabel="Repository" index="1"/>
@@ -287,25 +289,22 @@
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="main.c" index="8">
-<position info="not_deleted" x="9669" y="0"/>
+<position info="not_deleted" x="6966" y="0"/>
 </item>
 <item historyLabel="main.c" index="8">
-<position info="not_deleted" x="10333" y="0"/>
+<position info="not_deleted" x="5256" y="0"/>
 </item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="10420" y="2"/>
+<item historyLabel="stm32f4xx_usart.h" index="9">
+<position info="not_deleted" x="5490" y="0"/>
 </item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="9647" y="0"/>
+<item historyLabel="core_cm4_simd.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="8">
-<position/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="9593" y="0"/>
+<item historyLabel="stm32f4xx_usart.h" index="9">
+<position info="not_deleted" x="5490" y="0"/>
 </item>
 <item active="true" historyLabel="main.c" index="8">
-<position info="not_deleted" x="9608" y="27"/>
+<position info="not_deleted" x="5256" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -357,8 +356,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_usart.h" tooltip="test_test/cmsis_lib/include/stm32f4xx_usart.h">
 <persistable path="/test_test/cmsis_lib/include/stm32f4xx_usart.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="Lab6/cmsis_boot/startup/startup_stm32f4xx.c">
-<persistable path="/Lab6/cmsis_boot/startup/startup_stm32f4xx.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="test.c" tooltip="test_test/test.c">
+<persistable path="/test_test/test.c"/>
 </file>
 </mruList>
 </workbench>

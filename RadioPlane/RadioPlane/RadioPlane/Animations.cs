@@ -16,7 +16,6 @@ namespace RadioPlane
 
         public float rotation;
 
-        // odpowiedzialne za animacje
         public int elapsedTime;
         public int frameTime;
         public int frameCount;
@@ -57,7 +56,7 @@ namespace RadioPlane
             if (this.Active == false) return;
 
 
-            elapsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds; // pobiera czas od ostatniej animacji 
+            elapsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds; 
 
             if (elapsedTime > frameTime)
             {
@@ -72,21 +71,16 @@ namespace RadioPlane
                 }
                 elapsedTime = 0;
             }
-
-            //destinationRect = new Rectangle((int)Position.X, (int)Position.Y, (int)(FrameWidth * scale), (int)(FrameHeight * scale));
             sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
-            spriteOrigin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);            // ustawienie srodka elementu
-            this.rotation = rot;                                                                // ustawienie rotacji
+            spriteOrigin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);            
+            this.rotation = rot;                                                                
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             if (Active)
             {
-                //spriteBatch.Draw(texture, destinationRect, sourceRect, color);
-                spriteBatch.Draw(texture, Position, sourceRect, Color.White, rotation, spriteOrigin, scale, SpriteEffects.None, 0);
-
-                
+                spriteBatch.Draw(texture, Position, sourceRect, Color.White, rotation, spriteOrigin, scale, SpriteEffects.None, 0);  
             }
         }
 

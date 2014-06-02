@@ -6,7 +6,6 @@
 #include "misc.h"
 #include "stm32f4xx_syscfg.h"
 #include "stm32f4xx_exti.h"
-typedef unsigned char byte;
 
 #define MAX_STRLEN 20 // this is the maximum string length of our string in characters
 volatile char received_string[MAX_STRLEN+1]; // this will hold the recieved string
@@ -259,26 +258,13 @@ void USART_puts(USART_TypeDef* USARTx, volatile char *s){
 int main(void) {
 	initButton();
 	initLEDs();
-	init_USART1(54000); // initialize USART1 @ 9600 baud
+	init_USART1(9600); // initialize USART1 @ 9600 baud
 
 	//USART_puts(USART1, "Init complete! Hello World!&"); // just send a message to indicate that it works
-	byte bull[5];
-						bull[0]=0x43;
-						bull[1]=0x78;
-						bull[2]=0x1E;
-						bull[3]=0x09;
-						bull[4]=7;
-				USART_puts(USART1, bull);
-				bull[0]=0x43;
-				bull[1]=0x78;
-				bull[2]=0x1E;
-				bull[3]=0x08;
-				bull[4]=50;
-	USART_puts(USART1, bull);
-	while (1){
 
-		char buff[4]="*&*";
-		/*if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)){
+
+	while (1){
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)){
 			char buff[100] = "Stan diod:\n";
 
 			strcat(buff, "Zielona-");
@@ -300,8 +286,7 @@ int main(void) {
 			USART_puts(USART1, buff);
 
 			Delay(0x1FFFF3);
-		}*/
-	USART_puts(USART1, buff);
+		}
 	/*
 	 * You can do whatever you want in here
 	 */

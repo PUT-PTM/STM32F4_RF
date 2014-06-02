@@ -19,60 +19,67 @@ namespace RadioPlane
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+
+        // general
+
         MainMenu Menu;
         Score SCORE;
+        bool Play = true;
+        bool GameOver = false;
+        bool SetStop = false;
+        bool Go;
+        float rotationPlane;
 
-        MouseState mouse;
-        
+        // obiects 
+
         Plane player;
         Vector2 playerPosition;
         Rectangle currentRect;
         Rectangle temp;
         Texture2D enemyTexture;
         List<Enemy> enemies;
-
         Texture2D explosionTexture;
         List<Animations> explosions;
-
         Texture2D tree1Texture;
         Texture2D tree2Texture;
+        Texture2D tree3Texture;
         List<tree> tree;
+        Texture2D lampaon;
+        Texture2D lampaoff;
+        Rectangle recLamp;
 
-        bool Play = true;
-        bool GameOver = false;
+
+        // control
 
         KeyboardState presentKey;
         KeyboardState pastKey;
+        MouseState mouse;
+        _RadioControl Radio;
 
-        // --- t³o --- 
+        // background
+
         Texture2D sky;
         AllBackground BACKGROUNDS;
-
         int ground = 80;
-        bool SetStop = false;
-        Random random;
+
+        // times 
 
         float elapsedTime;
-
-        float rotationPlane;
-
-        TimeSpan PauseTime;
-
+        float countDuration = 0.05f;
+        float currentTime = 0f;
         TimeSpan enemySpawnTime;
         TimeSpan previousSpawnTime;
-
         TimeSpan treeSpawnTime;
         TimeSpan previousTreeSpawnTime;
 
+        // other 
+
+        SpriteFont font;
+        Random random;
         int score;
         int Score;
-        SpriteFont font;
 
-        bool Go;
-        float countDuration = 0.05f;
-        float currentTime = 0f;
-
-        _RadioControl Radio;    // zmienna do odbiornika
+        // enum
 
         enum GameState
         {
@@ -131,7 +138,7 @@ namespace RadioPlane
             IsMouseVisible = true;
             
 
-            // obsluga radiowa
+            // RADIO
             
             Radio = new _RadioControl();
             if (Radio.CheckPorts().Length != 0)
@@ -155,24 +162,27 @@ namespace RadioPlane
 
 
             Animations playerAnimation = new Animations();
-            Texture2D playerTexture = Content.Load<Texture2D>("plane");
-            playerAnimation.Initialize(playerTexture, Vector2.Zero, 150, 57, 1, 60, Color.White, 1f, true, 1);
-            playerPosition = new Vector2(playerTexture.Width, playerTexture.Height + 100);
+            Texture2D playerTexture = Content.Load<Texture2D>("plane3");
+            playerAnimation.Initialize(playerTexture, Vector2.Zero, 164, 55, 6, 20, Color.White, 1f, true, 1);
+            playerPosition = new Vector2(170, 155);
 
             player.Initialize(playerAnimation, playerPosition);
 
             enemyTexture = Content.Load<Texture2D>("f16");
 
-            explosionTexture = Content.Load<Texture2D>("explosion");
+            explosionTexture = Content.Load<Texture2D>("explosion2");
 
-            tree1Texture = Content.Load<Texture2D>("tree");
-            tree2Texture = Content.Load<Texture2D>("tree2");
+            tree1Texture = Content.Load<Texture2D>("treeA");
+            tree2Texture = Content.Load<Texture2D>("treeB");
+            tree3Texture = Content.Load<Texture2D>("treeC");
+
+            lampaon = Content.Load<Texture2D>("lampaon");
+            lampaoff = Content.Load<Texture2D>("lampaoff");
+            recLamp = new Rectangle(30, 500, 70, 70);
 
             sky = Content.Load<Texture2D>("sky");
 
             BACKGROUNDS = new AllBackground(this.Content, player);
-
-            
         }
 
        
@@ -188,7 +198,7 @@ namespace RadioPlane
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            presentKey = Keyboard.GetState();     // obecnie wciœniêty klawisz
+            presentKey = Keyboard.GetState();
 
             switch (CurrentGameState)
             {
@@ -261,9 +271,9 @@ namespace RadioPlane
                         }
                         if (Play)
                         {
-                            // zmiana rotacji
                             currentRect = new Rectangle((int)player.Position.X, (int)player.Position.Y, (int)player.Width, (int)player.Height);
                             temp = getBoundsWithRotation(currentRect, rotationPlane);
+                            // CHANGE ROTATION
                             switch (CurrentController)
                             {
                                 case GameController.Arrow:
@@ -278,7 +288,7 @@ namespace RadioPlane
                                     }
                                 case GameController.Radio:
                                     {
-                                        currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; //Time passed since last Update() 
+                                        currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; 
 
                                         if (currentTime >= countDuration)
                                         {
@@ -310,16 +320,14 @@ namespace RadioPlane
                                     }
                             }
                             
-
                             player.rotation = rotationPlane;
                             player.speed = CountSpeed(player.StaticSpeed);
-
 
                             UpdateEnemies(gameTime);
                             UpdateTree(gameTime);
                             PlayerUpdate(gameTime);
 
-                            //UploadingBackground();
+                            // UploadingBackground();
                             BACKGROUNDS.UpdateAll();
                             for (int i = 0; i < BACKGROUNDS.Backgrounds.Count; i++)
                             {
@@ -331,8 +339,6 @@ namespace RadioPlane
 
                             if (player.Alive) score++;
                             if (score >= 10) { Score += 10; score -= 10; }
-                            
-
                         }
 
                         if (SetStop)
@@ -347,13 +353,11 @@ namespace RadioPlane
                         if (Score == 2000) enemySpawnTime = TimeSpan.FromSeconds(2.0f);
                         if (Score == 4000) enemySpawnTime = TimeSpan.FromSeconds(1.0f);
                         UpdateExplosions(gameTime);
-
                         break;
                     }
             }
 
             pastKey = presentKey;
-            
             base.Update(gameTime);
         }
 
@@ -394,8 +398,8 @@ namespace RadioPlane
                     End();
                 }
                 
-                player.Position.Y += (player.rotation * 3);     // zmiana wysokoœci gracza
-                player.Update(gameTime);                        // update gracza
+                player.Position.Y += (player.rotation * 3);    
+                player.Update(gameTime);                       
             }
         }
 
@@ -449,16 +453,20 @@ namespace RadioPlane
         {
             Animations treeAnimation = new Animations();
             Vector2 position;
-
-            if (random.Next(0, 2) == 0)
+            int r = random.Next(0, 3);
+            if (r == 0)
             {
-                treeAnimation.Initialize(tree1Texture, Vector2.Zero, 163, 200, 1, 60, Color.White, 1f, true, 1);
+                treeAnimation.Initialize(tree1Texture, Vector2.Zero, 160, 227, 1, 60, Color.White, 1f, true, 1);
                 position = new Vector2(GraphicsDevice.Viewport.Width + tree1Texture.Width + random.Next(0, 150), (GraphicsDevice.Viewport.Height - ground) - tree1Texture.Height / 2);
             }
-            else
+            else if(r == 1)
             {
-                treeAnimation.Initialize(tree2Texture, Vector2.Zero, 130, 250, 1, 60, Color.White, 1f, true, 1);
+                treeAnimation.Initialize(tree2Texture, Vector2.Zero, 124, 220, 1, 60, Color.White, 1f, true, 1);
                 position = new Vector2(GraphicsDevice.Viewport.Width + tree2Texture.Width + random.Next(0,150), (GraphicsDevice.Viewport.Height - ground) - tree2Texture.Height / 2);
+            }
+            else {
+                treeAnimation.Initialize(tree3Texture, Vector2.Zero, 128, 250, 1, 60, Color.White, 1f, true, 1);
+                position = new Vector2(GraphicsDevice.Viewport.Width + tree3Texture.Width + random.Next(0, 150), (GraphicsDevice.Viewport.Height - ground) - tree3Texture.Height / 2);
             }
             tree Tre = new tree();
             Tre.Initialize(treeAnimation, position);
@@ -519,8 +527,15 @@ namespace RadioPlane
                             explosions[i].Draw(spriteBatch);
                         }
 
-                        if (Go) spriteBatch.DrawString(font, "Jest sygnaL...", new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X + 300, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.White);
-
+                        if(CurrentController == GameController.Radio){
+                            if(Go){
+                                spriteBatch.Draw(lampaon, recLamp, Color.White);
+                            }
+                            else {
+                                spriteBatch.Draw(lampaoff, recLamp, Color.White);
+                            }
+                        }
+                           
                         if (GameOver == true)
                         {
                             string[] teksty = { "KONIEC GRY", "Zdobyte punkty: ", "Naciœnij \"R\" aby zacz¹æ ponownie." };
@@ -548,7 +563,6 @@ namespace RadioPlane
 
             Vector2 origin = new Vector2((float)rect.X, (float)rect.Y);
             float rot = angle % (float)Math.PI / 2.0f;  // Rotate between 0 and 2pi
-            //double halfRot = Math.Cos(Math.PI / 2.0);
 
             float dx = (float)Math.Abs(Math.Cos(angle)) * (rect.Width / 2.0f) + (float)Math.Abs(Math.Sin(angle)) * (rect.Height / 2.0f);
             float dy = (float)Math.Abs(Math.Sin(angle)) * (rect.Width / 2.0f) + (float)Math.Abs(Math.Cos(angle)) * (rect.Height / 2.0f);
@@ -576,7 +590,6 @@ namespace RadioPlane
 
                     if (rectangle1.Intersects(rectangle2))
                     {
-                        //if (PixelCollision(player.PlayerAnimation.texture, enemies[i].EnemyAnimation.texture, rectangle1, rectangle2))
                         if(IntersectPixels(player.transform, player.Width, player.Height, player.PlayerAnimation.colorData,
                         enemies[i].transform, enemies[i].Width, enemies[i].Height, enemies[i].EnemyAnimation.colorData))
                         {
@@ -594,7 +607,6 @@ namespace RadioPlane
 
                     if (rectangle1.Intersects(rectangle2))
                     {
-                        //if (PixelCollision(player.PlayerAnimation.texture, tree[i].EnemyAnimation.texture, rectangle1, rectangle2))
                         if (IntersectPixels(player.transform, player.Width, player.Height, player.PlayerAnimation.colorData,
                         tree[i].transform, tree[i].Width, tree[i].Height, tree[i].EnemyAnimation.colorData))
                         {
@@ -621,42 +633,31 @@ namespace RadioPlane
         Matrix transformA, int widthA, int heightA, Color[] dataA,
         Matrix transformB, int widthB, int heightB, Color[] dataB)
         {
-            // Calculate a matrix which transforms from A's local space into
-            // world space and then into B's local space
             Matrix transformAToB = transformA * Matrix.Invert(transformB);
 
-            // For each row of pixels in A
             for (int yA = 0; yA < heightA; yA++)
             {
-                // For each pixel in this row
                 for (int xA = 0; xA < widthA; xA++)
                 {
-                    // Calculate this pixel's location in B
                     Vector2 positionInB =
                         Vector2.Transform(new Vector2(xA, yA), transformAToB);
 
-                    // Round to the nearest pixel
                     int xB = (int)Math.Round(positionInB.X);
                     int yB = (int)Math.Round(positionInB.Y);
 
-                    // If the pixel lies within the bounds of B
                     if (0 <= xB && xB < widthB &&
                         0 <= yB && yB < heightB)
                     {
-                        // Get the colors of the overlapping pixels
                         Color colorA = dataA[xA + yA * widthA];
                         Color colorB = dataB[xB + yB * widthB];
 
-                        // If both pixels are not completely transparent,
                         if (colorA.A != 0 && colorB.A != 0)
                         {
-                            // then an intersection has been found
                             return true;
                         }
                     }
                 }
             }
-            // No intersection found
             return false;
         }
     }

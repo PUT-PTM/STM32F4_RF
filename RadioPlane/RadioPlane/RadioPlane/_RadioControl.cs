@@ -64,11 +64,40 @@ namespace RadioPlane
         public void SetSignal(object sender, SerialDataReceivedEventArgs e)
         {
             Buffor += this.PortDevice.ReadExisting();
+            
+            if (this.Buffor.Length > 2)
+            {
+                if (checkMark(this.Buffor))
+                {
+                    this.Signal = true;
+                    Buffor = "";
+                }
+                
+            }
+             
+            // stara wersja 
+            /*
             if (this.Buffor.Length > 0)
             {
                 if (!this.Signal) this.Signal = true;
                 Buffor = "";
             }
+             */
+        }
+
+        public bool checkMark(string b)
+        {
+            int i = 0;
+            while (i < b.Length)
+            {
+                if (b[i] == '*')
+                    if (b[i + 1] == '&')
+                        if (b[i + 2] == '*')
+                            return true;
+                if(i+3 == b.Length) break;
+                i++;
+            }
+            return false;
         }
 
         public bool CheckSignal()

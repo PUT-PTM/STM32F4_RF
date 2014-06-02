@@ -62,8 +62,8 @@ namespace RadioPlane
             Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("miniclouds2"), new Rectangle(0, 0, 1000, 400), new Vector2(1000, 0), 1.7f));
             Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("bigclouds1"), new Rectangle(0, 0, 1000, 400), Vector2.Zero, 3.4f));
             Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("bigclouds2"), new Rectangle(0, 0, 1000, 400), new Vector2(1000, 0), 3.4f));
-            Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("bggrass"), new Rectangle(0, 0, 1000, 200), new Vector2(0, 420), playerSpeed));
-            Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("bggrass"), new Rectangle(0, 0, 1000, 200), new Vector2(1000, 420), playerSpeed));
+            Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("bggrass2"), new Rectangle(0, 0, 1000, 200), new Vector2(0, 420), playerSpeed));
+            Backgrounds.Add(new Scrolling(Content.Load<Texture2D>("bggrass2"), new Rectangle(0, 0, 1000, 200), new Vector2(1000, 420), playerSpeed));
         }
 
         public void UpdateAll()

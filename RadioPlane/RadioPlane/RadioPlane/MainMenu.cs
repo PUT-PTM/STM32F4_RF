@@ -42,7 +42,7 @@ namespace RadioPlane
         {
             CurentState = MenuState.main;
             
-            bgmenu = Content.Load<Texture2D>("mainmenu");
+            bgmenu = Content.Load<Texture2D>("mainmenu2");
 
             this.font = Content.Load<SpriteFont>("lightgamefont");
 
@@ -130,8 +130,6 @@ namespace RadioPlane
                     }
                 case MenuState.score:
                     {
-                        //Rectangle btn;
-                        //Rectangle mouseRectangle = new Rectangle(mouse.X, mouse.Y, 1, 1);
                         if (presentMouse.LeftButton == ButtonState.Pressed && pastMouse.LeftButton == ButtonState.Released) CurentState = MainMenu.MenuState.main;
                         break;
                     }
@@ -173,9 +171,6 @@ namespace RadioPlane
                         break;
                     }
             }
-            
-            
-            //spriteBatch.Draw();
         }
     }
 }
