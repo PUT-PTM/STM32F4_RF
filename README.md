@@ -7,6 +7,6 @@ Practical use is showed by a game(,,Radio Plane" in C#) which can be controlled 
 All files are provided and STM projects use only standard CooCox library files, besides XNA environment for a game project.
 
 Goals of this project:
-*Check ranges of signals between two adapters depending on different parameters.
-*Show practical usage of this kind of connection.
+* Check ranges of signals between two adapters depending on different parameters.
+* Show practical usage of this kind of connection.
 
