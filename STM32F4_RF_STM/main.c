@@ -318,19 +318,8 @@ void USART1_IRQHandler(void){
 			ControlComand(received_string);
 			received_string[cnt] = t;
 			cnt = 0;
-			//USART_puts(USART1, received_string);
 			ClearString();
 		}
 	}
-		/*
-		if( (t != 'n') && (cnt < 20) ){
-			received_string[cnt] = t;
-			cnt++;
-		}
-		else{ // otherwise reset the character counter and print the received string
-			cnt = 0;
-			USART_puts(USART1, received_string);
-		}
-		*/
 }
 

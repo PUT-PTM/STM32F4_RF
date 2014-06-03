@@ -66,15 +66,6 @@ namespace STM32F4_RF_MOBOT
             SerialPort port = new SerialPort(com, 56000, Parity.None, 8, StopBits.One);
             port.Open();
 
-            /*
-            if (port.PortName == "COM3")
-                port.Write(new byte[] { 0x43, 0x78, 0x1E, 0x07, 2 }, 0, 5);
-            if (port.PortName == "COM7")
-                port.Write(new byte[] { 0x43, 0x78, 0x1E, 0x07, 3 }, 0, 5);
-            */
-            //port.Write(new byte[] { 0x43, 0x78, 0x1E, 0x07, 254 }, 0, 5);
-
-
             Listen LISTEN = new Listen(port);
 
             Thread oThread = new Thread(new ThreadStart(LISTEN.Listening));

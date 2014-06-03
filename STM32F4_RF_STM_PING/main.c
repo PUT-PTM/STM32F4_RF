@@ -52,11 +52,6 @@ void initLEDs() {
 		GPIO_InitStructure2.GPIO_PuPd = GPIO_PuPd_NOPULL;
 
 		GPIO_Init(GPIOD, &GPIO_InitStructure2);
-		//GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
-		//GPIO_SetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
-		//GPIO_SetBits(GPIOD, GPIO_Pin_12);
-		//GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-		//Delay(0x1FFFF3);
 }
 
 void initButton() {
@@ -172,7 +167,7 @@ int main(void) {
 
 	//USART_puts(USART1, "Init complete! Hello World!&"); // just send a message to indicate that it works
 	byte bull[5];
-
+	//Set lowest power parameter
 	bull[0]=0x43;
 	bull[1]=0x78;
 	bull[2]=0x1E;
@@ -180,7 +175,8 @@ int main(void) {
 	bull[4]=7;
 
 	USART_puts(USART1, bull);
-
+	
+	//Set 50000bps
 	bull[0]=0x43;
 	bull[1]=0x78;
 	bull[2]=0x1E;
@@ -193,9 +189,6 @@ int main(void) {
 		char buff[4]="*&*";
 
 		USART_puts(USART1, buff);
-	/*
-	 * You can do whatever you want in here
-	 */
 	}
 }
 
@@ -212,23 +205,6 @@ void USART1_IRQHandler(void){
 		/* check if the received character is not the LF character (used to determine end of string)
 		 * or the if the maximum string length has been been reached
 		 */
-
-		/*
-		if( (t != '&') && (t != '\n') ){
-			received_string[cnt] = t;
-			cnt++;
-		}
-		else if( t == '\n'){
-
-		}
-		else {
-			received_string[cnt] = '\0';
-			received_string[cnt] = t;
-			cnt = 0;
-			//USART_puts(USART1, received_string);
-			ClearString();
-		}
-		*/
 	}
 
 }

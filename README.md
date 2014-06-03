@@ -47,7 +47,7 @@ Debugging
 ---------
 CooCox is the in-circuit debugger via the ST-LINK works out of the box.  Click the little bug icon, wait a few seconds, and you've breakpoints in a live embedded device. 
 
-Visual Studio has his own enough clear debbuger, so it doesn't need more description. =)
+Visual Studio has his own enough clear debugger, so it doesn't need more description. =)
 
 Future changes
 --------------
