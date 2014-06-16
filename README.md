@@ -29,6 +29,10 @@ Radio Plane(you have to have XNA environment installed and configured)
 * Build/Debug: Load the project in Visual Studio 2012(or newest version), click Debug(or F5)
 * Test: Hook a USB Radio Adapter(ex.MOBOT RCR-V2). The device should show up as a virtual com port. Program automatically detects first connected COM and uses it as a default device. In settings you can choose if you control game by radio or keys. For radio to work you need to use adapter connected to STM device(most preferable STM32F407VG) with compiled and downloaded STM32F4_RF_STM_PING project.
 
+STM32F4_RF_MOBOT
+* Build/Debug: Load the project in Visual Studio 2012(or newest version), click Debug(or F5)
+* Test: Application allows you to test radio connection between computer with radio adapter and STM with radio adapter or module imitating radio connection for STM(connected to computer). Needs manual enteries of com devices. 
+
 STM32F4_RF_PROG
 * Build/Debug: Load the project in Visual Studio 2012(or newest version), click Debug(or F5)
 * Test: Application allows you to test radio connection depending on parameters you choose. Automatically detects connected com devices. Tip: don't write your own text, when values from list are available.
